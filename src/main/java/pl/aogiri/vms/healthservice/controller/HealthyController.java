@@ -17,4 +17,9 @@ public class HealthyController {
     public ResponseEntity<VirtualServerStatus> getHealth(){
         return ResponseEntity.ok(service.getHealth());
     }
+
+    @GetMapping("/health")
+    public ResponseEntity<Object> getHealthService(){
+        return ResponseEntity.ok().build();
+    }
 }
